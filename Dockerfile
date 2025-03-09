@@ -15,7 +15,7 @@ COPY Makefile Makefile
 ARG ARCH
 RUN make prometheus-adapter
 
-FROM gcr.io/distroless/static:latest-$ARCH
+FROM gcr.io/distroless/static:latest-amd64
 
 COPY --from=build /go/src/sigs.k8s.io/prometheus-adapter/adapter /
 USER 65534
