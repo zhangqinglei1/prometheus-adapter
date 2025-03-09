@@ -1,5 +1,5 @@
 ARG ARCH
-ARG GO_VERSION
+ARG GO_VERSION=1.23
 
 FROM golang:${GO_VERSION} as build
 
